@@ -1,8 +1,8 @@
 {
-	"name": "Awesome Extension",
-	"version": "0.0.0",
-	"description": "An awesome new browser extension",
-	"homepage_url": "https://github.com/fregante/browser-extension-template",
+	"name": "Simply Dark",
+	"version": "0.0.1",
+	"description": "Yet another darkmode browser extension.",
+	"homepage_url": "https://github.com/timciep/yet-another-darkmode-browser-extension",
 	"manifest_version": 2,
 	"minimum_chrome_version": "74",
 	"applications": {
@@ -12,18 +12,18 @@
 		}
 	},
 	"icons": {
-		"128": "icon.png"
+		"128": "icons/dark/logo.png"
 	},
 	"permissions": [
-		"https://github.com/fregante/browser-extension-template/*",
-		"storage"
+		"activeTab"
 	],
-	"content_scripts": [ 
+	"content_scripts": [
 		{
-			"matches": [ "https://github.com/fregante/browser-extension-template/*" ],
+			"matches": [ "<all_urls>" ],
+			"all_frames": true,
 			"js": [ "content.js" ],
 			"css": [ "content.css" ],
-			"run_at": "document_end"
+			"run_at": "document_start"
 		}
  	],
 	"options_ui": {
@@ -31,9 +31,16 @@
 		"page": "options.html"
 	},
 	"background": {
-		"persistent": false,
 		"scripts": [
 			"background.js"
 		]
-	}
+	},
+	"browser_action": {
+		"browser_style": true,
+		"default_icon": {
+		  "16": "icons/dark/16x16.png",
+		  "32": "icons/dark/32x32.png"
+		},
+		"default_title": "Simply Dark"
+	 }
 }

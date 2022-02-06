@@ -1,15 +1,29 @@
-import optionsStorage from './options-storage.js';
+"use strict";
 
-async function init() {
-	const options = await optionsStorage.getAll();
-	const color = 'rgb(' + options.colorRed + ', ' + options.colorGreen + ',' + options.colorBlue + ')';
-	const text = options.text;
-	const notice = document.createElement('div');
-	notice.innerHTML = text;
-	document.body.append(notice);
-	notice.id = 'text-notice';
-	notice.style.border = '2px solid ' + color;
-	notice.style.color = color;
-}
+const CSS_CONTENT = '* { background: #444 !important; color: white !important; }';
+var disabled = true;
 
-init();
+document.addEventListener("DOMContentLoaded", function(){
+	var head = document.head || document.getElementsByTagName('head')[0];
+
+	var style = document.createElement('style');
+	style.id = 'simplydark-styles';
+	style.disabled = true;
+	style.type = 'text/css';
+
+	head.appendChild(style);
+});
+
+browser.runtime.onMessage.addListener(request => {
+	const styles = document.getElementById('simplydark-styles');
+
+	if (styles) {
+		if (disabled) {
+			styles.innerHTML = CSS_CONTENT;
+		} else {
+			styles.innerHTML = '';
+		}
+
+		disabled = ! disabled;
+	}
+});

@@ -1,4 +1,4 @@
-# browser-extension-template
+# Simply Dark
 
 [link-webext-polyfill]: https://github.com/mozilla/webextension-polyfill
 [link-rgh]: https://github.com/sindresorhus/refined-github
@@ -9,11 +9,8 @@
 [link-cws-keys]: https://github.com/DrewML/chrome-webstore-upload/blob/master/How%20to%20generate%20Google%20API%20keys.md
 [link-amo-keys]: https://addons.mozilla.org/en-US/developers/addon/api/key
 
-> Cross-browser extension boilerplate - barebones template with Parcel 2, options handler and auto-publishing.
+> With Parcel 2, options handler and auto-publishing.
 
-Screenshot of extension options:
-
-![Sample extension options output](media/previewer.png)
 
 ## Features
 
@@ -24,10 +21,6 @@ Screenshot of extension options:
 - [Extensive configuration documentation](#configuration).
 
 ## Getting started
-
-### Create your own copy
-
-1. Click [<kbd>Use this template</kbd>](https://github.com/fregante/browser-extension-template/generate) to make a copy of your own. 😉
 
 ### Build locally
 
@@ -50,12 +43,6 @@ Using [web-ext](https://extensionworkshop.com/documentation/develop/getting-star
 
 You can also [load the extension manually in Chrome](https://www.smashingmagazine.com/2017/04/browser-extension-edge-chrome-firefox-opera-brave-vivaldi/#google-chrome-opera-vivaldi) or [Firefox](https://www.smashingmagazine.com/2017/04/browser-extension-edge-chrome-firefox-opera-brave-vivaldi/#mozilla-firefox).
 
-### Make the first change
-
-1. For example, edit source\manifest.json to `"name": "My Awesome Extension",`
-1. Go back to your browser, reload and see the change take effect
-
-Note: Firefox will automatically reload content scripts when the extension is updated, Chrome requires you to reload the page to reload the content scripts.
 
 ## Configuration
 
@@ -94,17 +81,3 @@ Thanks to the included [GitHub Action Workflows](.github/workflows), if you set 
 
 - on a schedule, by default [every week](.github/workflows/deploy-automatic.yml) (but only if there are any new commits in the last tag)
 - manually, by clicking ["Run workflow"](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/) in the Actions tab.
-
-## Credits
-
-Extension icon made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0).
-
-## Extensions created using this template
-
-- [notlmn/copy-as-markdown](https://github.com/notlmn/copy-as-markdown) - Browser extension to copy hyperlinks, images, and selected text as Markdown.
-
-## License
-
-This browser extension template is released under [CC0](#license) and mentioned below. There is no `license` file included in here, but when you clone this template, you should include your own license file for the specific license you choose to use.
-
-[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
