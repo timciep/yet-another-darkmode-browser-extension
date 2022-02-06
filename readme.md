@@ -1,5 +1,7 @@
 # Simply Dark
 
+Firefox store: https://addons.mozilla.org/en-US/firefox/addon/simply-dark-timciep/
+
 [link-webext-polyfill]: https://github.com/mozilla/webextension-polyfill
 [link-rgh]: https://github.com/sindresorhus/refined-github
 [link-ngh]: https://github.com/sindresorhus/notifier-for-github
